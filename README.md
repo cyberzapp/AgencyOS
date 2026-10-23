@@ -4,7 +4,7 @@
 
 **AI-Powered Client Approval, Cryptographic Version Audit & Delivery Platform for Small Content Agencies**
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.1-black?logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.28-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth_%26_Firestore-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-Pub%2FSub_%26_Storage-4285F4?logo=googlecloud&logoColor=white)](https://cloud.google.com/)
