@@ -99,16 +99,22 @@ export async function synthesizeClientFeedbackToActions(params: {
     isCloudConfigured: isGeminiConfigured,
     primaryFn: async () => {
       const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-      const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
-        contents: `You are AgencyOS Feedback Triage Copilot. Convert this client comment on deliverable "${params.deliverableTitle}" (v${params.versionNumber}) into 2-4 concrete, checkable action items for a designer.
+      const interaction = await ai.interactions.create({
+        model: "gemini-3.8-flash",
+        input: `You are AgencyOS Feedback Triage Copilot. Convert this client comment on deliverable "${params.deliverableTitle}" (v${params.versionNumber}) into 2-4 concrete, checkable action items for a designer.
 Client Comment: "${params.comment}"
 Return strict JSON array of objects with keys: "task" (string), "category" ("typography"|"color"|"layout"|"copy"|"compliance"), "priority" ("high"|"medium"|"low").`,
       });
-      const text = response.text || "[]";
-      const jsonMatch = text.match(/\[[\s\S]*\]/);
+      const interactionData = interaction as unknown as {
+        output_text?: string | null;
+        steps?: unknown[];
+      };
+      const rawOutput =
+        interactionData.output_text ||
+        JSON.stringify(interactionData.steps || interaction);
+      const jsonMatch = rawOutput.match(/\[[\s\S]*\]/);
       if (!jsonMatch) {
-        throw new Error("Invalid JSON array from Gemini");
+        throw new Error("Invalid JSON array from Gemini 3.8 Flash");
       }
       const parsed = JSON.parse(jsonMatch[0]) as Array<{
         task: string;

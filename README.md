@@ -8,7 +8,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth_%26_Firestore-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-Pub%2FSub_%26_Storage-4285F4?logo=googlecloud&logoColor=white)](https://cloud.google.com/)
-[![Gemini AI](https://img.shields.io/badge/Google_Gemini-2.5_Flash-8E75B2?logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![Gemini AI](https://img.shields.io/badge/Google_Gemini-3.8_Flash-8E75B2?logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![Tests](https://img.shields.io/badge/Vitest-6%2F6_Passing-10B981?logo=vitest&logoColor=white)](#testing--verification)
 [![License: MIT](https://img.shields.io/badge/License-MIT-slate.svg)](./LICENSE)
 
@@ -47,7 +47,7 @@ Provides agency owners with real-time visibility into **pending approvals**, **o
 
 ## System Architecture
 
-AgencyOS is built with a **Dual-Mode Circuit-Breaker Resilience Layer** (`src/lib/resilience.ts`). When deployed with live Google Cloud & Firebase credentials, it routes operations to **Firebase Auth**, **Cloud Firestore**, **Cloud Pub/Sub**, **Cloud Storage**, and **Gemini 2.5 Flash**. When running as a self-contained demo or if an upstream cloud service experiences degradation, the circuit breaker automatically falls back to a serverless-safe local persistence and work-queue engine with zero downtime.
+AgencyOS is built with a **Dual-Mode Circuit-Breaker Resilience Layer** (`src/lib/resilience.ts`). When deployed with live Google Cloud & Firebase credentials, it routes operations to **Firebase Auth**, **Cloud Firestore**, **Cloud Pub/Sub**, **Cloud Storage**, and **Gemini 3.8 Flash**. When running as a self-contained demo or if an upstream cloud service experiences degradation, the circuit breaker automatically falls back to a serverless-safe local persistence and work-queue engine with zero downtime.
 
 ```mermaid
 flowchart LR
@@ -74,7 +74,7 @@ flowchart LR
         FB["Firebase Auth & Firestore"]
         PubSub["GCP Pub/Sub Work Queues"]
         GCS["GCP Cloud Storage"]
-        Gemini["Google Gemini 2.5 Flash"]
+        Gemini["Google Gemini 3.8 Flash"]
     end
 
     Gate --> Workspace
