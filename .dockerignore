@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.gitignore
+.env*
+!.env.example
+.agencyos-runtime-db.json
+npm-debug.log*
+coverage
