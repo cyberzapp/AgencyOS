@@ -4,6 +4,12 @@
 
 **AI-Powered Client Approval, Cryptographic Version Audit & Delivery Platform for Small Content Agencies**
 
+<p align="center">
+  <a href="https://agency-os-breathy.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-agency--os--breathy.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+</p>
+
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.28-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth_%26_Firestore-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
@@ -12,7 +18,14 @@
 [![Tests](https://img.shields.io/badge/Vitest-6%2F6_Passing-10B981?logo=vitest&logoColor=white)](#testing--verification)
 [![License: MIT](https://img.shields.io/badge/License-MIT-slate.svg)](./LICENSE)
 
+### 🔗 **Live Demo**: [https://agency-os-breathy.vercel.app/](https://agency-os-breathy.vercel.app/)
+
 </div>
+
+---
+
+> [!TIP]
+> **Instant Live Testing**: Anyone can test the live interactive software prototype immediately at **[https://agency-os-breathy.vercel.app/](https://agency-os-breathy.vercel.app/)** with zero installation or setup required.
 
 ---
 
@@ -211,6 +224,10 @@ npm install
 
 ### 2. Run in Interactive Prototype Mode (Zero Config Required)
 
+**Online Live Preview**:  
+Test immediately in the browser without installing anything: 👉 **[https://agency-os-breathy.vercel.app/](https://agency-os-breathy.vercel.app/)**
+
+**Local Development**:  
 AgencyOS works out of the box without any external API keys using its built-in resilient demo engine:
 
 ```bash
